@@ -1,0 +1,390 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 3850 3250 1050 1400
+U 5DACEDA5
+F0 "NodeMCU v2" 50
+F1 "nodemcu_v2.sch" 50
+F2 "D0" I R 4900 3350 50 
+F3 "D1" I R 4900 3450 50 
+F4 "BYPASS" I L 3850 3350 50 
+F5 "OPEN" O R 4900 4500 50 
+F6 "DOOR_SENSE" I L 3850 4150 50 
+$EndSheet
+$Sheet
+S 3700 2200 1300 300 
+U 5DACEEA0
+F0 "Power" 50
+F1 "power.sch" 50
+$EndSheet
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5DAFEC9B
+P 2650 3350
+F 0 "J1" H 2730 3387 50  0000 L CNN
+F 1 "Conn_01x02" H 2730 3296 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2650 3350 50  0001 C CNN
+F 3 "~" H 2650 3350 50  0001 C CNN
+F 4 "Bypass switch, pulldown" H 2730 3205 50  0000 L CNN "Note"
+	1    2650 3350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 5DAFFD70
+P 3000 2900
+F 0 "#PWR0101" H 3000 2750 50  0001 C CNN
+F 1 "+3V3" H 3015 3073 50  0000 C CNN
+F 2 "" H 3000 2900 50  0001 C CNN
+F 3 "" H 3000 2900 50  0001 C CNN
+	1    3000 2900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3350 2850 3350
+$Comp
+L Device:R R1
+U 1 1 5DB00ACD
+P 3000 3100
+F 0 "R1" H 2930 3146 50  0000 R CNN
+F 1 "10k" H 2930 3055 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2930 3100 50  0001 C CNN
+F 3 "~" H 3000 3100 50  0001 C CNN
+	1    3000 3100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3250 3000 3350
+Wire Wire Line
+	3000 2900 3000 2950
+Wire Wire Line
+	2850 3450 3000 3450
+Wire Wire Line
+	3000 3450 3000 3600
+$Comp
+L power:GND #PWR0102
+U 1 1 5DB01A20
+P 3000 3600
+F 0 "#PWR0102" H 3000 3350 50  0001 C CNN
+F 1 "GND" H 3005 3427 50  0000 C CNN
+F 2 "" H 3000 3600 50  0001 C CNN
+F 3 "" H 3000 3600 50  0001 C CNN
+	1    3000 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 5DB023C7
+P 6900 4000
+F 0 "D1" V 6854 4079 50  0000 L CNN
+F 1 "1N4148" V 6945 4079 50  0000 L CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6900 4000 50  0001 C CNN
+F 3 "~" H 6900 4000 50  0001 C CNN
+	1    6900 4000
+	0    1    1    0   
+$EndComp
+Text Label 3100 3350 0    50   ~ 0
+BYPASS
+Text Label 5250 4500 0    50   ~ 0
+OPEN
+$Comp
+L cagelock-parts:Relay_SPDT Relay1
+U 1 1 5DB0B91D
+P 7700 4400
+F 0 "Relay1" H 7650 4500 50  0000 C CNN
+F 1 "Relay_SPDT" H 7650 4400 50  0000 C CNN
+F 2 "cagelock:DS2E-S-DC5V" H 7700 4400 50  0001 C CNN
+F 3 "" H 7700 4400 50  0001 C CNN
+	1    7700 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 4200 6900 4300
+$Comp
+L power:+12V #PWR0103
+U 1 1 5DB10FE0
+P 7200 3750
+F 0 "#PWR0103" H 7200 3600 50  0001 C CNN
+F 1 "+12V" H 7215 3923 50  0000 C CNN
+F 2 "" H 7200 3750 50  0001 C CNN
+F 3 "" H 7200 3750 50  0001 C CNN
+	1    7200 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7200 3750 7200 3800
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5DB11721
+P 8450 3500
+F 0 "J3" H 8530 3537 50  0000 L CNN
+F 1 "Conn_01x02" H 8530 3446 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8450 3500 50  0001 C CNN
+F 3 "~" H 8450 3500 50  0001 C CNN
+F 4 "Magnetic lock - powered when locked" H 8530 3355 50  0000 L CNN "Note"
+	1    8450 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 3600 8250 3600
+$Comp
+L power:GND #PWR0104
+U 1 1 5DB12AF4
+P 6900 4800
+F 0 "#PWR0104" H 6900 4550 50  0001 C CNN
+F 1 "GND" H 6905 4627 50  0000 C CNN
+F 2 "" H 6900 4800 50  0001 C CNN
+F 3 "" H 6900 4800 50  0001 C CNN
+	1    6900 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5DB12D8A
+P 8000 4350
+F 0 "#PWR0105" H 8000 4100 50  0001 C CNN
+F 1 "GND" H 8005 4177 50  0000 C CNN
+F 2 "" H 8000 4350 50  0001 C CNN
+F 3 "" H 8000 4350 50  0001 C CNN
+	1    8000 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 4700 6900 4800
+$Comp
+L Device:R R2
+U 1 1 5DB13C92
+P 6200 4500
+F 0 "R2" V 5993 4500 50  0000 C CNN
+F 1 "1k" V 6084 4500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6130 4500 50  0001 C CNN
+F 3 "~" H 6200 4500 50  0001 C CNN
+	1    6200 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6600 4500 6350 4500
+Wire Wire Line
+	6050 4500 4900 4500
+Wire Wire Line
+	8150 3400 8150 3500
+Wire Wire Line
+	8150 3500 8250 3500
+Wire Wire Line
+	4900 3450 5950 3450
+Wire Wire Line
+	4900 3350 5950 3350
+Text Label 5250 3450 0    50   ~ 0
+D1
+Text Label 5250 3350 0    50   ~ 0
+D0
+Wire Wire Line
+	5850 3550 5850 3600
+Wire Wire Line
+	5950 3550 5850 3550
+Wire Wire Line
+	5850 3250 5950 3250
+Wire Wire Line
+	5850 3200 5850 3250
+$Comp
+L power:GND #PWR0106
+U 1 1 5DB05098
+P 5850 3600
+F 0 "#PWR0106" H 5850 3350 50  0001 C CNN
+F 1 "GND" H 5855 3427 50  0000 C CNN
+F 2 "" H 5850 3600 50  0001 C CNN
+F 3 "" H 5850 3600 50  0001 C CNN
+	1    5850 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0107
+U 1 1 5DB04D90
+P 5850 3200
+F 0 "#PWR0107" H 5850 3050 50  0001 C CNN
+F 1 "+12V" H 5865 3373 50  0000 C CNN
+F 2 "" H 5850 3200 50  0001 C CNN
+F 3 "" H 5850 3200 50  0001 C CNN
+	1    5850 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5DB03BF1
+P 6150 3350
+F 0 "J2" H 6230 3387 50  0000 L CNN
+F 1 "Conn_01x04" H 6230 3296 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6150 3350 50  0001 C CNN
+F 3 "~" H 6150 3350 50  0001 C CNN
+F 4 "HID Wiegand Reader" H 6230 3205 50  0000 L CNN "Note"
+	1    6150 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 5DACE875
+P 6800 4500
+F 0 "Q1" H 6990 4546 50  0000 L CNN
+F 1 "2N3904" H 6990 4455 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7000 4425 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 6800 4500 50  0001 L CNN
+	1    6800 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3350 3850 3350
+Connection ~ 3000 3350
+Wire Wire Line
+	6900 4200 7600 4200
+Wire Wire Line
+	7200 3850 7600 3850
+Wire Wire Line
+	7200 3800 6900 3800
+Wire Wire Line
+	6900 3800 6900 3850
+Connection ~ 7200 3800
+Wire Wire Line
+	7200 3800 7200 3850
+Wire Wire Line
+	6900 4150 6900 4200
+Connection ~ 6900 4200
+Wire Wire Line
+	8000 4150 8000 4350
+Wire Wire Line
+	7900 3600 7900 3850
+NoConn ~ 8100 3850
+$Comp
+L power:+24V #PWR0108
+U 1 1 5DB4169E
+P 8150 3400
+F 0 "#PWR0108" H 8150 3250 50  0001 C CNN
+F 1 "+24V" H 8165 3573 50  0000 C CNN
+F 2 "" H 8150 3400 50  0001 C CNN
+F 3 "" H 8150 3400 50  0001 C CNN
+	1    8150 3400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8300 3850
+NoConn ~ 8500 3850
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5DB4CF08
+P 3050 5850
+F 0 "H1" H 3150 5896 50  0000 L CNN
+F 1 "MountingHole" H 3150 5805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 3050 5850 50  0001 C CNN
+F 3 "~" H 3050 5850 50  0001 C CNN
+	1    3050 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5DB4D296
+P 3300 5850
+F 0 "H3" H 3400 5896 50  0000 L CNN
+F 1 "MountingHole" H 3400 5805 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 3300 5850 50  0001 C CNN
+F 3 "~" H 3300 5850 50  0001 C CNN
+	1    3300 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 5DB4D3D3
+P 3300 6050
+F 0 "H4" H 3400 6096 50  0000 L CNN
+F 1 "MountingHole" H 3400 6005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 3300 6050 50  0001 C CNN
+F 3 "~" H 3300 6050 50  0001 C CNN
+	1    3300 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5DB4D530
+P 3050 6050
+F 0 "H2" H 3150 6096 50  0000 L CNN
+F 1 "MountingHole" H 3150 6005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3mm" H 3050 6050 50  0001 C CNN
+F 3 "~" H 3050 6050 50  0001 C CNN
+	1    3050 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J5
+U 1 1 5E5DD3D5
+P 2350 4600
+F 0 "J5" H 2430 4637 50  0000 L CNN
+F 1 "Conn_01x02" H 2430 4546 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 2350 4600 50  0001 C CNN
+F 3 "~" H 2350 4600 50  0001 C CNN
+F 4 "Bypass switch, pulldown" H 2430 4455 50  0000 L CNN "Note"
+	1    2350 4600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR01
+U 1 1 5E5DD3DB
+P 2700 4150
+F 0 "#PWR01" H 2700 4000 50  0001 C CNN
+F 1 "+3V3" H 2715 4323 50  0000 C CNN
+F 2 "" H 2700 4150 50  0001 C CNN
+F 3 "" H 2700 4150 50  0001 C CNN
+	1    2700 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4600 2550 4600
+$Comp
+L Device:R R3
+U 1 1 5E5DD3E2
+P 2700 4350
+F 0 "R3" H 2630 4396 50  0000 R CNN
+F 1 "10k" H 2630 4305 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2630 4350 50  0001 C CNN
+F 3 "~" H 2700 4350 50  0001 C CNN
+	1    2700 4350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4500 2700 4600
+Wire Wire Line
+	2700 4150 2700 4200
+Wire Wire Line
+	2550 4700 2700 4700
+Wire Wire Line
+	2700 4700 2700 4850
+$Comp
+L power:GND #PWR02
+U 1 1 5E5DD3EC
+P 2700 4850
+F 0 "#PWR02" H 2700 4600 50  0001 C CNN
+F 1 "GND" H 2705 4677 50  0000 C CNN
+F 2 "" H 2700 4850 50  0001 C CNN
+F 3 "" H 2700 4850 50  0001 C CNN
+	1    2700 4850
+	-1   0    0    -1  
+$EndComp
+Text Label 2800 4600 0    50   ~ 0
+DOOR_SENSE
+Connection ~ 2700 4600
+Wire Wire Line
+	2700 4600 3600 4600
+Wire Wire Line
+	3600 4600 3600 4150
+Wire Wire Line
+	3600 4150 3850 4150
+$EndSCHEMATC

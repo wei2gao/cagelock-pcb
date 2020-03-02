@@ -1,0 +1,142 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+24V #PWR0112
+U 1 1 5DAFACD6
+P 4600 3650
+F 0 "#PWR0112" H 4600 3500 50  0001 C CNN
+F 1 "+24V" H 4615 3823 50  0000 C CNN
+F 2 "" H 4600 3650 50  0001 C CNN
+F 3 "" H 4600 3650 50  0001 C CNN
+	1    4600 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0113
+U 1 1 5DAFB3E1
+P 6000 3650
+F 0 "#PWR0113" H 6000 3500 50  0001 C CNN
+F 1 "+12V" H 6015 3823 50  0000 C CNN
+F 2 "" H 6000 3650 50  0001 C CNN
+F 3 "" H 6000 3650 50  0001 C CNN
+	1    6000 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5DB3B928
+P 3900 3750
+AR Path="/5DB3B928" Ref="J4"  Part="1" 
+AR Path="/5DACEEA0/5DB3B928" Ref="J4"  Part="1" 
+F 0 "J4" H 3818 3335 50  0000 C CNN
+F 1 "Conn_01x02" H 3818 3426 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3900 3750 50  0001 C CNN
+F 3 "~" H 3900 3750 50  0001 C CNN
+F 4 "24V input" H 3818 3517 50  0000 C CNN "Note"
+	1    3900 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 3650 4600 3650
+$Comp
+L power:GND #PWR0117
+U 1 1 5DB3C033
+P 4150 3800
+F 0 "#PWR0117" H 4150 3550 50  0001 C CNN
+F 1 "GND" H 4155 3627 50  0000 C CNN
+F 2 "" H 4150 3800 50  0001 C CNN
+F 3 "" H 4150 3800 50  0001 C CNN
+	1    4150 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3750 4150 3750
+Wire Wire Line
+	4150 3750 4150 3800
+$Comp
+L power:+5V #PWR?
+U 1 1 5E5DFF16
+P 7400 3650
+F 0 "#PWR?" H 7400 3500 50  0001 C CNN
+F 1 "+5V" H 7415 3823 50  0000 C CNN
+F 2 "" H 7400 3650 50  0001 C CNN
+F 3 "" H 7400 3650 50  0001 C CNN
+	1    7400 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5E5E59D9
+P 5300 3750
+AR Path="/5E5E59D9" Ref="J?"  Part="1" 
+AR Path="/5DACEEA0/5E5E59D9" Ref="J?"  Part="1" 
+F 0 "J?" H 5218 3335 50  0000 C CNN
+F 1 "Conn_01x02" H 5218 3426 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5300 3750 50  0001 C CNN
+F 3 "~" H 5300 3750 50  0001 C CNN
+F 4 "12V input" H 5218 3517 50  0000 C CNN "Note"
+	1    5300 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5500 3650 6000 3650
+$Comp
+L power:GND #PWR?
+U 1 1 5E5E59E0
+P 5550 3800
+F 0 "#PWR?" H 5550 3550 50  0001 C CNN
+F 1 "GND" H 5555 3627 50  0000 C CNN
+F 2 "" H 5550 3800 50  0001 C CNN
+F 3 "" H 5550 3800 50  0001 C CNN
+	1    5550 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 3750 5550 3750
+Wire Wire Line
+	5550 3750 5550 3800
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5E5E6173
+P 6700 3750
+AR Path="/5E5E6173" Ref="J?"  Part="1" 
+AR Path="/5DACEEA0/5E5E6173" Ref="J?"  Part="1" 
+F 0 "J?" H 6618 3335 50  0000 C CNN
+F 1 "Conn_01x02" H 6618 3426 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6700 3750 50  0001 C CNN
+F 3 "~" H 6700 3750 50  0001 C CNN
+F 4 "5V input" H 6618 3517 50  0000 C CNN "Note"
+	1    6700 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6900 3650 7400 3650
+$Comp
+L power:GND #PWR?
+U 1 1 5E5E617A
+P 6950 3800
+F 0 "#PWR?" H 6950 3550 50  0001 C CNN
+F 1 "GND" H 6955 3627 50  0000 C CNN
+F 2 "" H 6950 3800 50  0001 C CNN
+F 3 "" H 6950 3800 50  0001 C CNN
+	1    6950 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 3750 6950 3750
+Wire Wire Line
+	6950 3750 6950 3800
+$EndSCHEMATC

@@ -1,0 +1,156 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+24V #PWR0112
+U 1 1 5DAFACD6
+P 3900 2000
+F 0 "#PWR0112" H 3900 1850 50  0001 C CNN
+F 1 "+24V" H 3915 2173 50  0000 C CNN
+F 2 "" H 3900 2000 50  0001 C CNN
+F 3 "" H 3900 2000 50  0001 C CNN
+	1    3900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR0113
+U 1 1 5DAFB3E1
+P 4850 2000
+F 0 "#PWR0113" H 4850 1850 50  0001 C CNN
+F 1 "+12V" H 4865 2173 50  0000 C CNN
+F 2 "" H 4850 2000 50  0001 C CNN
+F 3 "" H 4850 2000 50  0001 C CNN
+	1    4850 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L7812 U2
+U 1 1 5DAFB79C
+P 4400 2150
+F 0 "U2" H 4400 2392 50  0000 C CNN
+F 1 "L7812" H 4400 2301 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabUp" H 4425 2000 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 4400 2100 50  0001 C CNN
+	1    4400 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2000 3900 2050
+Wire Wire Line
+	3900 2150 4100 2150
+Wire Wire Line
+	4700 2150 4850 2150
+Wire Wire Line
+	4850 2150 4850 2000
+$Comp
+L power:GND #PWR0114
+U 1 1 5DAFCA57
+P 4400 2550
+F 0 "#PWR0114" H 4400 2300 50  0001 C CNN
+F 1 "GND" H 4405 2377 50  0000 C CNN
+F 2 "" H 4400 2550 50  0001 C CNN
+F 3 "" H 4400 2550 50  0001 C CNN
+	1    4400 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 2450 4400 2550
+$Comp
+L device:C C1
+U 1 1 5DAFCF41
+P 3900 2400
+F 0 "C1" H 4015 2446 50  0000 L CNN
+F 1 "0.33u" H 4015 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3938 2250 50  0001 C CNN
+F 3 "~" H 3900 2400 50  0001 C CNN
+	1    3900 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C2
+U 1 1 5DAFD279
+P 4850 2400
+F 0 "C2" H 4965 2446 50  0000 L CNN
+F 1 "0.1u" H 4965 2355 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4888 2250 50  0001 C CNN
+F 3 "~" H 4850 2400 50  0001 C CNN
+	1    4850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0115
+U 1 1 5DAFD6BE
+P 3900 2600
+F 0 "#PWR0115" H 3900 2350 50  0001 C CNN
+F 1 "GND" H 3905 2427 50  0000 C CNN
+F 2 "" H 3900 2600 50  0001 C CNN
+F 3 "" H 3900 2600 50  0001 C CNN
+	1    3900 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 5DAFD968
+P 4850 2600
+F 0 "#PWR0116" H 4850 2350 50  0001 C CNN
+F 1 "GND" H 4855 2427 50  0000 C CNN
+F 2 "" H 4850 2600 50  0001 C CNN
+F 3 "" H 4850 2600 50  0001 C CNN
+	1    4850 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2150 3900 2250
+Connection ~ 3900 2150
+Wire Wire Line
+	4850 2150 4850 2250
+Connection ~ 4850 2150
+Wire Wire Line
+	4850 2550 4850 2600
+Wire Wire Line
+	3900 2550 3900 2600
+$Comp
+L Connector_Generic:Conn_01x02 J4
+U 1 1 5DB3B928
+P 3200 2150
+F 0 "J4" H 3118 1735 50  0000 C CNN
+F 1 "Conn_01x02" H 3118 1826 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3200 2150 50  0001 C CNN
+F 3 "~" H 3200 2150 50  0001 C CNN
+F 4 "24V input" H 3118 1917 50  0000 C CNN "Note"
+	1    3200 2150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3400 2050 3900 2050
+Connection ~ 3900 2050
+Wire Wire Line
+	3900 2050 3900 2150
+$Comp
+L power:GND #PWR0117
+U 1 1 5DB3C033
+P 3450 2200
+F 0 "#PWR0117" H 3450 1950 50  0001 C CNN
+F 1 "GND" H 3455 2027 50  0000 C CNN
+F 2 "" H 3450 2200 50  0001 C CNN
+F 3 "" H 3450 2200 50  0001 C CNN
+	1    3450 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2150 3450 2150
+Wire Wire Line
+	3450 2150 3450 2200
+$EndSCHEMATC
